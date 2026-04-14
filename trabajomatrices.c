@@ -26,5 +26,21 @@ for ( i = 0 ; i < 5 ; i++) {
          while ( notas [i][j] < 0 || notas [i][j] > 10 ) ; 
         
     }
+   
+}
+   printf ("    Promedio, Nota Max y Min por Estudiante    \n  ");
+for ( i = 0 ; i < 5 ; i++ ) {
+   float suma = 0 ; 
+   float max = notas [i][0];
+   float min = notas [i][0];
 
+
+   for ( j = 0 ; j < 3 ; j++ ) {
+suma = suma + notas [ i ][ j ];
+if ( notas [i][j] > max ) max = notas [i][j];
+if ( notas [i][j] < min ) min = notas [i][j];
+
+
+   }
+   printf ("Estudiante %d -> Promedio: %.2f / Max%.2f / Min: %.2f \n", i + 1, suma / 3, max, min);
 }
